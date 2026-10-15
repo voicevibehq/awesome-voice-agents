@@ -87,11 +87,13 @@ Add WeChat | 添加江树微信: **1796060717**
 | [Oathra](https://github.com/FORIFOR/oathra) | ![GitHub Repo stars](https://badgen.net/github/stars/FORIFOR/oathra) | Runtime for AI agents that make real phone calls and return verified results: every field is anchored to the callee's own words, completion is decided by code (0 false completions in 10,000 adversarial simulator runs). Playable AI-vs-AI simulator with no API key, Twilio direct or any SIP trunk via LiveKit, GPT-Live / OpenAI Realtime / STT+LLM+TTS engines. Apache-2.0, TypeScript. | 让 AI Agent 真正拨打电话并返回可验证结果的运行时：每个字段都锚定到对方原话，完成与否由代码判定；自带无需 API Key 的 AI 对战模拟器，支持 Twilio 直连或经 LiveKit 的任意 SIP 线路，GPT-Live / Realtime / 流水线引擎可换 |
 | [murmur](https://github.com/wine-fall/murmur) | ![GitHub Repo stars](https://badgen.net/github/stars/wine-fall/murmur) | Always-on AI radio host for the terminal: picks its own topics, talks, plays music; type back and it answers in a voice that sounds human. Claude Agent SDK brain, fish-speech TTS, keyboard in / voice out. MIT, TypeScript. | 常驻终端的 AI 电台主播：自己挑话题聊、放歌、接着播；打字回它，它用接近真人的声音回答。Claude Agent SDK 大脑 + fish-speech 语音，键盘输入、语音输出 |
 | [AI Meeting](https://github.com/FORIFOR/AI-meeting) | ![GitHub Repo stars](https://badgen.net/github/stars/FORIFOR/AI-meeting) | React/TypeScript voice assistant with interruptible conversations, VRM avatars, quoted-speech checks for task changes, and browser-local task persistence. [Try the account-free task flow](https://ai-meeting.web.app/#tasks). | 语音任务助手，支持打断、VRM 角色与浏览器本地保存。Beta；[无需账号的任务体验](https://ai-meeting.web.app/#tasks) · [录音预览](https://ai-meeting.web.app/vrm-demo)。角色素材另有许可。 |
+| [Sipral](https://github.com/SIPRAL/sipral) | ![GitHub Repo stars](https://badgen.net/github/stars/SIPRAL/sipral) | SIP client stack in Rust with a headless mode for voice agents: answers and places calls, hands audio to your code. AGPL-3.0 or commercial. | Rust SIP 客户端协议栈，含无头语音 Agent 模式 |
 
 ### Commercial Speech-to-Speech Platforms | 商业语音平台
 
 | Name | Description | Notes |
 |------|-------------|-------|
+| [Kalyvox](https://kalyvox.ai/en/ai-answering-service) | AI receptionist platform for SMBs handling inbound calls, qualification, appointment booking, routing and transfers. | 24/7 answering, multilingual conversations, Google Calendar and Zapier integrations; built in France. |
 | [Hume EVI](https://www.hume.ai/empathic-voice-interface) | Empathic speech-to-speech foundation model (EVI 3) that reads and responds to emotion/prosody. 100,000+ customizable voices. | 共情语音模型，感知并回应情绪语调 |
 | [Amazon Nova Sonic](https://aws.amazon.com/ai/generative-ai/nova/) | AWS Bedrock speech-to-speech foundation model with polyglot voices, async tool calling, large context, LiveKit/Pipecat integrations. | AWS 语音到语音大模型，多语种同声、异步工具调用 |
 | [Speechmatics Flow](https://www.speechmatics.com/flow) | Conversational voice-agent API built on high-accuracy multilingual ASR with sentiment/tone awareness. | 基于高精度多语种 ASR 的对话语音 Agent API |
@@ -137,6 +139,7 @@ Turn Detection/Endpointing determines when a user has finished speaking - a core
 | [Smart Turn (Pipecat)](https://github.com/pipecat-ai/smart-turn) | ![GitHub Repo stars](https://badgen.net/github/stars/pipecat-ai/smart-turn) | Open-source turn detection model (BSD 2-clause). Supports 23 languages. Semantic and audio feature-based. No GPU required for real-time inference. | 完全开源，提供 Fal 托管服务（免费）|
 | [LiveKit Turn Detector](https://github.com/livekit/agents) | ![GitHub Repo stars](https://badgen.net/github/stars/livekit/agents) | Transformer-based semantic analysis. 85% true positive rate, ~50ms inference time. | 基于 Transformer，结合 VAD 效果最佳 |
 | [TEN Turn Detection](https://github.com/TEN-framework/ten-turn-detection) | ![GitHub Repo stars](https://badgen.net/github/stars/TEN-framework/ten-turn-detection) | Open-source semantic turn-detection model for full-duplex dialogue; classifies finished/unfinished/wait utterances to enable natural interruption and barge-in. | TEN 团队全双工对话话轮检测模型，语义判断说完/未说完，支持自然打断 |
+| [DuplexJev](https://github.com/adventists-ai/duplexjev) | ![GitHub Repo stars](https://badgen.net/github/stars/adventists-ai/duplexjev) | Open-weights speech LLM (4B / 32B) that reads the turn state (finished / still talking / backchannel / asking to wait) plus emotion, non-verbal sounds and barge-in from raw audio in one forward pass, no ASR. LiveKit and Pipecat plugins. | 中英双语；一次前向同时给出话轮、情绪、笑声、打断等判断，不需要转写 |
 
 ### Commercial Solutions | 商业解决方案
 
@@ -170,6 +173,7 @@ OpenAI Whisper is the most powerful open-source speech recognition model, but do
 
 | Name | Stars | Description | Notes |
 |------|-------|-------------|-------|
+| [tiny-audio](https://github.com/alexkroman/tiny-audio) | ![GitHub Repo stars](https://badgen.net/github/stars/alexkroman/tiny-audio) | Minimal, hackable PyTorch/HF Transformers codebase for training LLM-based ASR: frozen Granite Speech encoder + Qwen3.5-2B (LoRA) via a small projector, ~80M trained params; 1.8% WER LibriSpeech test-clean, word timestamps, diarization, batched inference server, free 3.5-hour course. MIT. | 基于LLM的可训练语音识别，含免费课程 |
 | [transcribe.cpp](https://github.com/handy-computer/transcribe.cpp) | ![GitHub Repo stars](https://badgen.net/github/stars/handy-computer/transcribe.cpp) | ggml speech-to-text inference for 16+ model families in one C++ engine. MIT. | 一个 C++ 引擎跑 16+ 种 STT 模型家族 |
 | [voxtral.c](https://github.com/antirez/voxtral.c) | ![GitHub Repo stars](https://badgen.net/github/stars/antirez/voxtral.c) | antirez's pure-C inference of Mistral Voxtral Realtime 4B STT. MIT. | Redis 作者用纯 C 实现的 Voxtral Realtime 4B 推理 |
 | [Whisper](https://github.com/openai/whisper) | ![GitHub Repo stars](https://badgen.net/github/stars/openai/whisper) | OpenAI's large-scale weakly-supervised speech recognition model; robust multilingual ASR and translation, the de-facto open-source STT baseline. | ⭐ 大规模弱监督鲁棒语音识别，开源 STT 事实标准 |
@@ -268,6 +272,7 @@ OpenAI Whisper is the most powerful open-source speech recognition model, but do
 | [Rime](https://rime.ai/) | Enterprise TTS for real-time voice agents; Mist v2 ~70-225ms TTFA, Arcana v2 for expressive paralinguistic voices. | 主打实时语音 Agent，极低延迟，发音确定性强 |
 | [PlayAI (PlayHT)](https://play.ai/) | Conversational-AI-focused API; Play 3.0 Mini ~143ms TTFB multilingual streaming, PlayDialog for two-speaker dialogue. | 面向对话 AI，低延迟流式，双人对话 |
 | [Gradium](https://gradium.ai/) | Real-time streaming TTS with instant voice cloning. 158ms P50 time to first audio. | 实时流式 TTS，P50 首音频 158ms，即时声音克隆 |
+| [Lokutor](https://lokutor.com/) | Real-time TTS API for voice agents; CPU-capable model (on-prem/edge deployable), GPU-hosted at scale. REST and WebSocket synthesis, 10 built-in voices, 9 supported languages. [API docs](https://docs.lokutor.com/) | 面向语音 Agent 的实时 TTS API，模型可在 CPU 上运行（支持本地/边缘部署），云端托管使用 GPU 以支持高并发。支持 REST 和 WebSocket，10 种内置声音、9 种语言 |
 
 ---
 
@@ -331,6 +336,7 @@ Talk to (and be talked to by) AI coding assistants like Claude Code, Cursor and 
 | [mcp-tts](https://github.com/blacktop/mcp-tts) | ![GitHub Repo stars](https://badgen.net/github/stars/blacktop/mcp-tts) | MCP server exposing multiple TTS backends (ElevenLabs, OpenAI, Google, macOS `say`) to agents. Go, MIT. | 一个 MCP 接多家 TTS（含本地 say），让 Agent 开口 |
 | [mcp-server-whisper](https://github.com/arcaputo3/mcp-server-whisper) | ![GitHub Repo stars](https://badgen.net/github/stars/arcaputo3/mcp-server-whisper) | MCP server for audio transcription/processing using OpenAI Whisper + GPT-4o audio. MIT. | 用 Whisper/GPT-4o 做转写的 MCP，给 Agent 加"耳朵" |
 | [claude-code-tts](https://github.com/ybouhjira/claude-code-tts) | ![GitHub Repo stars](https://badgen.net/github/stars/ybouhjira/claude-code-tts) | TTS MCP plugin specifically for Claude Code — audio feedback while coding via OpenAI TTS, non-blocking worker pool. MIT. | 专为 Claude Code 的 TTS 插件，编码时听语音反馈 |
+| [CallForMe](https://callforme.tel) | Hosted | Remote MCP server (`https://callforme.tel/mcp`, OAuth) that lets Claude, ChatGPT, Cursor or any MCP agent phone a business: works phone menus, waits on hold, asks the agent mid-call, returns transcript + answers. Paid per answered call; free demo line. | 让 Agent 替你给商家打电话（询价、订位、取消、排队等待），通话中可回问 Agent，返回通话记录与结构化答案 |
 
 ### Coding Agent Voice Tools | 编程 Agent 语音工具
 
@@ -343,6 +349,8 @@ Talk to (and be talked to by) AI coding assistants like Claude Code, Cursor and 
 | [claude-whisper](https://github.com/Ashton-Sidhu/claude-whisper) | ![GitHub Repo stars](https://badgen.net/github/stars/Ashton-Sidhu/claude-whisper) | Push-to-talk (hold ESC) voice control for Claude Code — wake word + command transcribed and run via Claude Agent SDK. | 按住 ESC 说话，唤醒词+指令直接驱动 Claude Code |
 | [voice-to-claude](https://github.com/enesbasbug/voice-to-claude) | ![GitHub Repo stars](https://badgen.net/github/stars/enesbasbug/voice-to-claude) | Claude Code plugin for high-quality dictation via whisper.cpp with Metal GPU accel; hold Ctrl+Alt to record. MIT. | whisper.cpp+Metal 加速的 Claude Code 本地听写插件 |
 | [Vibe Kanban](https://github.com/BloopAI/vibe-kanban) | ![GitHub Repo stars](https://badgen.net/github/stars/BloopAI/vibe-kanban) | Kanban orchestration for Claude Code / Codex / Gemini CLI agents; pairs naturally with voice dictation for hands-free planning. | 统一编排 Claude Code/Codex 等 Agent 的看板，配语音全程动嘴 |
+| [echo agent](https://echoagent.dev/) | — | macOS voice agent: press Fn+Space in any app, speak a task, and it runs in your local Claude Code or Codex CLI in the background, optionally with a screenshot of the current window. On-device STT (English/Chinese). Closed source, free download. | 回声：Mac 上任意应用按 Fn+Space 说一句，交给本机 Claude Code / Codex 在后台执行；本机识别中英文语音 |
+| [Better Call GPT](https://github.com/insta-fusion/bettercallgpt) | ![GitHub Repo stars](https://badgen.net/github/stars/insta-fusion/bettercallgpt) | Claude Code plugin that puts the running session on a full-duplex voice call (Azure GPT Realtime / GPT-Live): talk while it codes, barge in, hear results read back; voice never approves permission prompts. macOS, MIT. | 给 Claude Code 会话接上全双工语音通话：边写边聊、可随时打断、结果念给你听；语音永不批准权限提示。 |
 | [VoiceVibe](https://github.com/VoiceVibe-AI/voicevibe) | ![GitHub Repo stars](https://badgen.net/github/stars/VoiceVibe-AI/voicevibe) | Desktop AI voice assistant for Windows/macOS/Linux: press one shortcut in any app to dictate, ask about the screen, or speak a task, review it and hand it to Claude Code, Codex or another AI agent. Free on-device voice typing; proprietary (repo is README + issue tracker). | 桌面 AI 语音助手：一键口述任务、审阅后交给 Claude Code/Codex 等 Agent，免费本地听写 |
 
 > **Note | 提示**: Claude Code now ships native voice dictation / push-to-talk; the tools above add richer two-way conversation, wake words and TTS feedback on top. | Claude Code 已内置原生语音听写，上述工具在此之上提供更丰富的双向对话、唤醒词与语音反馈。
@@ -353,6 +361,7 @@ Talk to (and be talked to by) AI coding assistants like Claude Code, Cursor and 
 |------|-------------|-------|
 | [Wispr Flow](https://wisprflow.ai/) | Cloud AI dictation (Mac/Win/iOS/Android), auto-edits filler/grammar; dedicated Cursor & Windsurf extensions to tag files/run commands by voice. | 开发者最热门 AI 听写，深度集成 Cursor/Windsurf |
 | [superwhisper](https://superwhisper.com/) | Mac-only, privacy-first dictation running Whisper fully on-device; system-wide. | Mac 本地 Whisper 听写，隐私优先，离线可用 |
+| [Swifly](https://www.swifly.me/) | Cloud AI dictation and voice typing for macOS, Windows, and iPhone, with rewriting, translation, a personal dictionary, and reusable snippets. | Free Basic and paid plans; internet required; features vary by platform. |
 
 ---
 
@@ -430,8 +439,11 @@ High-star, general-purpose voice/speech projects: end-to-end toolkits, wake-word
 | [Vapi](https://vapi.ai/) | Platform for quickly building voice AI agents. Low-code, rich integrations, telephony support. | 低代码快速构建平台 |
 | [Retell AI](https://www.retellai.com/) | Conversational AI platform with enterprise-grade turn-taking management. | 企业级话轮管理 |
 | [Tavus](https://www.tavus.io/) | Real-time conversational video API. Transformer-based turn detection, multimodal video+voice. | 视频+语音多模态 |
+| [bitHuman](https://www.bithuman.ai/) | Real-time avatars for voice agents from one portrait. Expression 2 renders any character live on iPhone, Android, Mac, Linux or in a WebGPU browser tab. LiveKit Agents plugin, Swift/Android SDKs, CLI with an MCP server. | 实时数字人，端侧渲染，LiveKit 插件 |
 | [Unpod](https://unpod.ai) | Voice infrastructure platform for building AI-native phone and messaging agents. Handles real-time call routing, low-latency speech pipelines, and telephony + SMS automation. | 电话+消息自动化，AI 原生语音基础设施 \| [GitHub](https://github.com/geneffic/unpod) |
+| [VoiceDock](https://voicedock.ai/en) | EU-hosted voice AI platform for phone and web calls. REST API, Node.js SDK, signed webhooks, a hosted MCP server and bring-your-own-keys. | 欧洲托管的电话与网页语音 AI 平台，提供 REST API、Node.js SDK 与托管 MCP 服务 |
 | [voicetest](https://github.com/voicetestdev/voicetest) | Test harness for voice agents. Import from Retell, VAPI, Bland, LiveKit. Run simulations. Evaluate with LLM judges. | 开源测试工具，多平台支持 |
+| [PlaceCall](https://voygr.tech/placecall/) | API and remote MCP server for AI agents that place real phone calls to US businesses. Navigates IVR and hold, returns outcome and transcript. | 美国商家真实外呼（订位、咨询、询价），返回结果与通话记录 \| [GitHub](https://github.com/voygr-tech/placecall) |
 
 ### Evaluation & Benchmarking | 评测与基准
 
@@ -447,6 +459,7 @@ Use these resources to choose an evaluation layer that matches the user outcome.
 | [VoiceComputerBench / TalkAct](https://github.com/19PINE-AI/TalkAct) | Real-time voice conversations coupled to Playwright browser tasks, with verifiable task outcomes. | 实时语音对话结合浏览器操作，并验证任务结果 |
 | [tau2-bench / tau-Voice](https://github.com/sierra-research/tau2-bench) | Stateful domain tasks with tools, simulated users, verifiable completion, and a full-duplex voice mode. | 状态化领域任务、工具、模拟用户、可验证完成与全双工语音 |
 | [OpenBenchmarks Voice Agent Latency](https://github.com/openbenchmarks-labs/voice-agent-latency) | Reproducible caller-perceived time-to-first-audio benchmark measured from real phone-call recordings. | 基于真实电话录音、可复现的首音频等待时间评测 |
+| [TRG (Timing-Recovery-Grounded)](https://github.com/shivamnegi92/voice-agent-eval-corpus) | Minimum reporting standard, not a benchmark itself: a compliance checker and shared-evaluator leaderboard that won't certify a report staying silent on an axis its deployment actually exercises (e.g. recovery after interruption). Ships with a 128-source corpus (v1.1.1) and a live [demo](https://huggingface.co/spaces/shivamnegi92/trg-voice-agent-eval). | 最小上报标准（非基准本身）：合规检查器+统一评测者排行榜，拒绝认证遗漏关键轴（如打断后恢复）的报告；附 v1.1.1 的 128 篇来源语料库 |
 
 ### Technical Blogs & Documentation | 技术博客与文档
 
